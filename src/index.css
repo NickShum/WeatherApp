@@ -1,13 +1,111 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "monsteratt", sans-serif;
+}
+
+.app {
+  background-image: url("./assets/after_noon.webp");
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4s ease-out;
+}
+.app.warm {
+  background-image: url("./assets/after_noon.webp");
+}
+main {
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0, 75)
+  );
+  padding: 25px;
+  
+  flex-direction: column;
+  align-items: center;
+}
+
+.search__box {
+  width: 100%;
+  margin: 20px 0 75px;
+}
+
+.search__bar {
+  display: block;
+  width: 100%;
+  padding: 15px;
+
+  appearance: none;
+  background: none;
+
+  border: none;
+  outline: none;
+
+  background-color: rgba(255, 255, 255, 0.2);
+
+  border-radius: 32px;
+
+  margin-top: -25px;
+
+  color: black;
+  font-size: 1.2rem;
+  transition: 0.4s ease-in;
+}
+
+.search__bar:focus {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.location {
+  color: white;
+  margin-top: -50px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.date {
+  color: white;
+  font-size: 20px;
+  font-weight: 100;
+  text-align: center;
+}
+
+.weather__box {
+  margin-top: 60px;
+  height: 70px;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s ease-in;
+}
+
+.temp {
+  color: white;
+  font-size: 9rem;
+  font-weight: 100;
+  
+  text-align: center;
+}
+
+.weather {
+margin-left: 90px;
+}
+
+.weather__type{
+  color: white;
+  font-size: 2rem;
+
+}
+.wind{
+color: white;
+font-size: 2rem;
 }
