@@ -14,9 +14,7 @@ body {
   background-position: bottom;
   transition: 0.4s ease-out;
 }
-.app.warm {
-  background-image: url("./assets/after_noon.webp");
-}
+
 main {
   min-height: 100vh;
   background-image: linear-gradient(
@@ -25,7 +23,7 @@ main {
     rgba(0, 0, 0, 0, 75)
   );
   padding: 25px;
-  
+
   flex-direction: column;
   align-items: center;
 }
@@ -62,50 +60,52 @@ main {
 }
 
 .location {
-  color: white;
-  margin-top: -50px;
-  font-size: 1.6rem;
-  font-weight: 700;
-  letter-spacing: 2px;
+  margin-top: -20px;
+
   text-align: center;
+
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 29px;
+  padding-bottom: 20px;
+  color: #ffffff;
 }
 
 .date {
   color: white;
-  font-size: 20px;
+  font-size: 40px;
   font-weight: 100;
   text-align: center;
+  padding-bottom: 50px;
 }
 
-.weather__box {
+.weather {
   margin-top: 60px;
   height: 70px;
   border: none;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   transition: 0.5s ease-in;
 }
 
 .temp {
-  color: white;
-  font-size: 9rem;
+  font-style: normal;
   font-weight: 100;
+  font-size: 12rem;
+  line-height: 75px;
   
-  text-align: center;
+  color: #FFFFFF;
 }
 
-.weather {
-margin-left: 90px;
-}
-
-.weather__type{
+.weather__type {
   color: white;
   font-size: 2rem;
-
 }
-.wind{
-color: white;
-font-size: 2rem;
+.wind {
+  color: white;
+  font-size: 2rem;
 }
