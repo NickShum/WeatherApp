@@ -6,33 +6,33 @@ const api = {
   base: "https://api.openweathermap.org/data/2.5/",
 };
 
-function time(unix) {
-  var a = new Date(unix * 1000);
-  console.log(a);
-  var months = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
-  ];
-  var year = a.getFullYear();
-  var month = months[a.getMonth()];
-  var date = a.getDate();
-  var hour = a.getHours();
-  var min = a.getMinutes();
-  var sec = a.getSeconds();
-  var time =
-    date + " " + month + " " + year + " " + hour + ":" + min + ":" + sec;
-  return time;
-}
+// function time(unix) {
+//   var a = new Date(unix * 1000);
+//   console.log(a);
+//   var months = [
+//     "Jan",
+//     "Feb",
+//     "Mar",
+//     "Apr",
+//     "May",
+//     "Jun",
+//     "Jul",
+//     "Aug",
+//     "Sep",
+//     "Oct",
+//     "Nov",
+//     "Dec",
+//   ];
+//   var year = a.getFullYear();
+//   var month = months[a.getMonth()];
+//   var date = a.getDate();
+//   var hour = a.getHours();
+//   var min = a.getMinutes();
+//   var sec = a.getSeconds();
+//   var time =
+//     date + " " + month + " " + year + " " + hour + ":" + min + ":" + sec;
+//   return time;
+// }
 
 function App() {
   const [query, setQuery] = useState("");
@@ -58,11 +58,11 @@ function App() {
       return `S${w - 180}°E`;
     } else if (w > 270 && w < 360) {
       return `N${360 - w}°W`;
-    } else if (w == 0) {
+    } else if (w === 0) {
       return `N`;
-    } else if (w == 90) {
+    } else if (w === 90) {
       return `E`;
-    } else if (w == 180) {
+    } else if (w === 180) {
       return `S`;
     } else {
       return `E`;
